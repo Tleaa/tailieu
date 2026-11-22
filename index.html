@@ -6,6 +6,9 @@
   <meta name="theme-color" content="#dceeff">
   <meta name="description" content="A colorful guide to four popular animated TV shows: Steven Universe, Adventure Time, Masha and the Bear, and The Powerpuff Girls.">
   <title>Animated Worlds | Four Popular TV Shows</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #25334b;
@@ -21,7 +24,7 @@
     body {
       margin: 0;
       color: var(--ink);
-      font-family: ui-rounded, "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-family: "Nunito", ui-rounded, "Segoe UI", system-ui, sans-serif;
       background:
         radial-gradient(circle at 8% 8%, rgba(255,255,255,.95) 0 2px, transparent 3px),
         radial-gradient(ellipse at 90% 4%, #f8e9ff 0, transparent 32%),
@@ -29,6 +32,9 @@
         linear-gradient(145deg, #eaf5ff 0%, #f4f1ff 48%, #fff5f1 100%);
       background-attachment: fixed;
       min-height: 100vh;
+    }
+    h1, h2, h3, .brand, .eyebrow, .number {
+      font-family: "Quicksand", "Nunito", sans-serif;
     }
     a { color: inherit; }
     .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
