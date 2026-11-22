@@ -91,8 +91,16 @@
     .show-card:hover { transform:translateY(-5px); box-shadow:0 20px 42px rgba(70,102,146,.15); }
     .show-card[hidden] { display:none; }
     .card-top {
-      min-height:170px; padding:24px; position:relative; overflow:hidden;
+      min-height:190px; padding:24px; position:relative; overflow:hidden;
       background:linear-gradient(135deg,var(--tint),#ffffff);
+      isolation:isolate;
+    }
+    .card-top:before {
+      content:""; position:absolute; inset:0; z-index:0;
+      background:
+        linear-gradient(90deg,var(--tint) 0%,rgba(255,255,255,.78) 52%,rgba(255,255,255,.16) 100%),
+        var(--poster) center/cover no-repeat;
+      opacity:.98; pointer-events:none;
     }
     .card-top:after {
       content:attr(data-symbol); position:absolute; right:22px; bottom:-30px;
@@ -182,7 +190,7 @@
 
       <div class="grid" id="showGrid">
         <article class="show-card" data-title="steven universe" data-category="adventure">
-          <div class="card-top" style="--accent:#d58aa9;--tint:#fff0f5" data-symbol="💎">
+          <div class="card-top" style="--accent:#d58aa9;--tint:#fff0f5;--poster:url('https://moviesense.io/img/movie/897/backdrop/w780.jpg')" data-symbol="💎">
             <span class="number">01 / GEM WORLD</span>
             <h3>Steven Universe</h3>
             <span class="years">2013–2020</span>
@@ -200,7 +208,7 @@
         </article>
 
         <article class="show-card" data-title="adventure time" data-category="adventure comedy">
-          <div class="card-top" style="--accent:#65a6a0;--tint:#e9f8f4" data-symbol="🍭">
+          <div class="card-top" style="--accent:#65a6a0;--tint:#e9f8f4;--poster:url('https://de.web.img3.acsta.net/pictures/14/04/09/13/23/547482.jpg')" data-symbol="🍭">
             <span class="number">02 / LAND OF OOO</span>
             <h3>Adventure Time</h3>
             <span class="years">2010–2018</span>
@@ -218,7 +226,7 @@
         </article>
 
         <article class="show-card" data-title="masha and the bear" data-category="comedy">
-          <div class="card-top" style="--accent:#e4a24e;--tint:#fff5e5" data-symbol="🐻">
+          <div class="card-top" style="--accent:#e4a24e;--tint:#fff5e5;--poster:url('https://s3.tvp.pl/images2/c/6/9/uid_c6976a13cb48467ab2f95d95fb0ec31e_width_1200_play_0_pos_0_gs_0_height_800.jpg')" data-symbol="🐻">
             <span class="number">03 / FOREST TALES</span>
             <h3>Masha and the Bear</h3>
             <span class="years">2009–Present</span>
@@ -236,7 +244,7 @@
         </article>
 
         <article class="show-card" data-title="the powerpuff girls" data-category="adventure comedy">
-          <div class="card-top" style="--accent:#8b8bd4;--tint:#f0efff" data-symbol="⭐">
+          <div class="card-top" style="--accent:#8b8bd4;--tint:#f0efff;--poster:url('https://s.animeanime.jp/imgs/p/64XVvff3mD9cFhi_PU1_DqGg_6ytrq_oqaqr/88869.jpg?zoom=spacing')" data-symbol="⭐">
             <span class="number">04 / TOWNSVILLE HEROES</span>
             <h3>The Powerpuff Girls</h3>
             <span class="years">1998–2005</span>
